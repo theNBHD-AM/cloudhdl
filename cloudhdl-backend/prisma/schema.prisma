@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String    @id @default(uuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  projects     Project[]
+}
+
+model Project {
+  id             String          @id @default(uuid())
+  title          String
+  userId         String
+  createdAt      DateTime        @default(now())
+  user           User            @relation(fields: [userId], references: [id])
+  simulationRuns SimulationRun[]
+  files ProjectFile[]
+}
+
+model SimulationRun {
+  id           String   @id @default(uuid())
+  projectId    String
+  status       String
+  stdout       String?
+  vcdOutput    String?
+  errorMessage String?
+  runAt        DateTime @default(now())
+  project      Project  @relation(fields: [projectId], references: [id])
+}
+
+model ProjectFile {
+  id        String   @id @default(uuid())
+  project   Project  @relation(fields: [projectId], references: [id])
+  projectId String
+  filename  String
+  content   String   @db.Text
+  fileType  String   // "design" | "testbench"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

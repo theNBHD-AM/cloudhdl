@@ -1,0 +1,29 @@
+# AI coding agent files
+.agents/
+.claude/
+.windsurf/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Runtime / generated files
+temp/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
