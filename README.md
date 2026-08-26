@@ -1,7 +1,15 @@
 # CloudHDL
 
 CloudHDL is a web-based Verilog development and simulation environment that runs hardware designs in isolated Docker containers and visualizes digital waveforms directly in the browser.
-
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
+![Node.js](https://img.shields.io/badge/Node.js-20+-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express-5-black?logo=express)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?logo=postgresql)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![Docker](https://img.shields.io/badge/Docker-Sandbox-2496ED?logo=docker)
+![Icarus Verilog](https://img.shields.io/badge/Icarus_Verilog-Simulation-orange)
 ---
 
 ## Key Features
